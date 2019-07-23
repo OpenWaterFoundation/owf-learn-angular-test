@@ -182,40 +182,40 @@ describe('ContactEditComponent Tests', () => {
 
     //<-------------------- Testing for invalide phone number -------------------------->
 
-        it('should  not update the phone number', fakeAsync( () => {
-            const newContact = {
-                id: 1,
-                name: 'Sal',
-                email: 'Sal@gmail.com',
-                number: '12345678901'            // invalid number: too long
-            };
+        // it('should  not update the phone number', fakeAsync( () => {
+        //     const newContact = {
+        //         id: 1,
+        //         name: 'Sal',
+        //         email: 'Sal@gmail.com',
+        //         number: '12345678901'            // invalid number: too long
+        //     };
 
-            component.contact = {
-                id: 2,
-                name: 'Q',
-                email: 'Q@gmail.com',
-                number: '6789012345'
-            };
+        //     component.contact = {
+        //         id: 2,
+        //         name: 'Q',
+        //         email: 'Q@gmail.com',
+        //         number: '6789012345'
+        //     };
 
-            component.isLoading = false;
-            fixture.detectChanges();
+        //     component.isLoading = false;
+        //     fixture.detectChanges();
             
-            const nameInput = rootElement.query(By.css('.contact-name'));
-            tick();
-            expect(nameInput.nativeElement.value).toBe('Q');
+        //     const nameInput = rootElement.query(By.css('.contact-name'));
+        //     tick();
+        //     expect(nameInput.nativeElement.value).toBe('Q');
             
-            // Update the existing contact to the newContact Object
-            component.updateContact(newContact);
+        //     // Update the existing contact to the newContact Object
+        //     component.updateContact(newContact);
 
-            // triggers change detection
-            fixture.detectChanges();
+        //     // triggers change detection
+        //     fixture.detectChanges();
 
-            // Simulates the passgae of time, in the passage of time in this case 100 miliseconds
-            tick(100);
+        //     // Simulates the passgae of time, in the passage of time in this case 100 miliseconds
+        //     tick(100);
 
-            // checks to see that the value in the nameInput form field has been changed correctly
-            expect(nameInput.nativeElement.value).toBe('Q')
-        }));
+        //     // checks to see that the value in the nameInput form field has been changed correctly
+        //     expect(nameInput.nativeElement.value).toBe('Q')
+        // }));
 
     //  <----------------------- Testing for invalid email  variable-------------------------->
 
