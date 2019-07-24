@@ -6,7 +6,7 @@ import { browser, element, by, ElementFinder, ElementArrayFinder } from 'protrac
 import { promise } from 'selenium-webdriver';
 
 const expectedH1 = 'Tour of Heroes';
-const expectedTitle = `${expectedH1}`;
+// const expectedTitle = `${expectedH1}`;
 const targetHero = { id: 15, name: 'Magneta' };
 const targetHeroDashboardIndex = 3;
 const nameSuffix = 'X';
@@ -19,16 +19,6 @@ class Hero {
   name: string;
 
   // Factory methods
-
-  //  Don't need this apperantly 
-
-  // Hero from string formatted as '<id> <name>'.
-  // static fromString(s: string): Hero {
-  //   return {
-  //     id: +s.substr(0, s.indexOf(' ')),
-  //     name: s.substr(s.indexOf(' ') + 1),
-  //   };
-  // }
 
   // Hero from hero list <li> element.
   static async fromLi(li: ElementFinder): Promise<Hero> {
@@ -54,6 +44,8 @@ describe('Tutorial part 6', () => {
 
   beforeAll(() => browser.get(''));
 
+  // function finds the various elements that can be found the page
+  // can be referenced later on to do some potential clicking
   function getPageElts() {
     let navElts = element.all(by.css('app-root nav a'));
 
@@ -78,11 +70,14 @@ describe('Tutorial part 6', () => {
 
   describe('Initial page', () => {
 
-    it(`has title 'TourOfHeroesTesting'`, () => {
-      expect(browser.getTitle()).toEqual('TourOfHeroesTesting');
+    it(`has title 'TourOfHeroes'`, () => {
+      // assertion and matcher toEqual
+      // expect the site's title to equal 'TourOfHeroes'
+      expect(browser.getTitle()).toEqual('TourOfHeroes');
     });
 
     it(`has h1 '${expectedH1}'`, () => {
+
         expectHeading(1, expectedH1);
     });
 
@@ -136,6 +131,7 @@ describe('Tutorial part 6', () => {
 
   describe('Heroes tests', () => {
 
+    // navigates to the page once befor all of the tests 
     beforeAll(() => browser.get(''));
     browser.sleep(1000);
 
@@ -224,6 +220,7 @@ describe('Tutorial part 6', () => {
 
   describe('Progressive hero search', () => {
 
+    // navigate to the page once before all of the tests begin
     beforeAll(() => browser.get(''));
 
     it(`searches for 'Ma'`, async () => {
