@@ -20,14 +20,14 @@ The repository contains the following:
 
 ```
 ├── owf-learn-angular-test
-|   ├── simple-e2e-testing-app/ .......................... The first unit testing example in testing in OWF documentation. 
+|   ├── simple-e2e-testing-app/ ....................... The first unit testing example in testing in OWF documentation. 
 |   ├── simple-unit-testing-app/ ...................... The first end to end testing example in testing OWF documentation.
-|   ├── tour-of-heroes/ .......................... Completed Tour of Heros Application from Angular tutorial.
-|   ├── tour-of-heroes-unit-testing/ ...................... Unit testing example using Tour of Heroes App.
-|   ├── tour-of-heroes-e2e-testing/ .......................... End to End testing example using Tour of Heroes App.
-|   ├── .gitattributes ....................... Typical Git configuration file.
-|   ├── .gitignore ........................... Typical Git configuration file.
-|   ├── README.md ............................ This file.
+|   ├── tour-of-heroes/ ................................ Completed Tour of Heros Application from Angular tutorial.
+|   ├── tour-of-heroes-unit-testing/ ................... Unit testing example using Tour of Heroes App.
+|   ├── tour-of-heroes-e2e-testing/ .................... End to End testing example using Tour of Heroes App.
+|   ├── .gitattributes ................................. Typical Git configuration file.
+|   ├── .gitignore ..................................... Typical Git configuration file.
+|   ├── README.md ...................................... This file.
 ```
 
 ## Development Environment
