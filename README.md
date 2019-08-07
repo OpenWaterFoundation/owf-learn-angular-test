@@ -1,5 +1,5 @@
 # owf-learn-angular-test
-**This repository contains automated tests used to support owf-learn-angular guide. Navigate to the [OWF - Learn Angular](<http://learn.openwaterfoundation.org/owf-learn-angular/>) learning resources on the Open Water Foundation site.  **
+**This repository contains automated tests used to support owf-learn-angular guide. Navigate to the [OWF - Learn Angular](<http://learn.openwaterfoundation.org/owf-learn-angular/>) learning resources on the Open Water Foundation site.**  
 
 This repository contains the [Open Water Foundation (OWF)](http://openwaterfoundation.org/) Angular learning materials, which provides guidance for testing an Angular web application using Angular's documentation as well as additional online resources. The documentation is written for the layperson in order to help Angular development be more accessible to others
 
