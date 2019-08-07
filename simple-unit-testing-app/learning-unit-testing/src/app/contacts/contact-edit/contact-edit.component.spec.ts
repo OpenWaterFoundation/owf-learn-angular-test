@@ -176,7 +176,8 @@ describe('ContactEditComponent Tests', () => {
             tick(100);
 
             // checks to see that the value in the nameInput form field has been changed correctly
-            expect(nameInput.nativeElement.value).toBe('Sal')
+            console.log(nameInput.nativeElement.value);
+            expect(nameInput.nativeElement.value).toBe('Sal');
         }));
 
 
@@ -219,41 +220,41 @@ describe('ContactEditComponent Tests', () => {
 
     //  <----------------------- Testing for invalid email  variable-------------------------->
 
-    //     it('should  not update the email', fakeAsync( () => {
-    //         const newContact = {
-    //             id: 1,
-    //             name: 'Sal',
-    //             email: 'Sal@gmail',          // invalid email: missing .com
-    //             number: '12345678901'
-    //         };
+        // it('should  not update the email', fakeAsync( () => {
+        //     const newContact = {
+        //         id: 1,
+        //         name: 'Sal',
+        //         email: 'Sal@gmail',          // invalid email: missing .com
+        //         number: '12345678901'
+        //     };
 
-    //         component.contact = {
-    //             id: 2,
-    //             name: 'Q',
-    //             email: 'Q@gmail.com',
-    //             number: '6789012345'
-    //         };
+        //     component.contact = {
+        //         id: 2,
+        //         name: 'Q',
+        //         email: 'Q@gmail.com',
+        //         number: '6789012345'
+        //     };
 
-    //         component.isLoading = false;
-    //         fixture.detectChanges();
+        //     component.isLoading = false;
+        //     fixture.detectChanges();
             
-    //         const nameInput = rootElement.query(By.css('.contact-name'));
-    //         tick();
-    //         expect(nameInput.nativeElement.value).toBe('Q');
+        //     const nameInput = rootElement.query(By.css('.contact-name'));
+        //     tick();
+        //     expect(nameInput.nativeElement.value).toBe('Q');
             
-    //         // Update the existing contact to the newContact Object
-    //         component.updateContact(newContact);
+        //     // Update the existing contact to the newContact Object
+        //     component.updateContact(newContact);
 
-    //         // triggers change detection
-    //         fixture.detectChanges();
+        //     // triggers change detection
+        //     fixture.detectChanges();
 
-    //         // Simulates the passgae of time, in the passage of time in this case 100 miliseconds
-    //         tick(100);
+        //     // Simulates the passgae of time, in the passage of time in this case 100 miliseconds
+        //     tick(100);
 
-    //         // checks to see that the value in the nameInput form field has been changed correctly
-    //         expect(nameInput.nativeElement.value).toBe('Q')
-    //     }));
-    // });
-    }); 
-});
+        //     // checks to see that the value in the nameInput form field has been changed correctly
+        //     expect(nameInput.nativeElement.value).toBe('Q')
+        // }));
+    });
+}); 
+
 
